@@ -20,6 +20,8 @@ import java.util.List;
 
 
 @RestController
+//@CrossOrigin("http://localhost:4200")
+@CrossOrigin("*")
 public class CinemaRestController {
     @Autowired
     private FilmRepository filmRepository;

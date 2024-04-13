@@ -7,13 +7,19 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CinemaComponent } from './components/cinema/cinema.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CinemasComponent } from './components/cinemas/cinemas.component';
+import { VilleComponent } from './components/ville/ville.component';
+import { SalleComponent } from './components/salle/salle.component';
+import { CinemaDetailComponent } from './components/cinema-detail/cinema-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     CinemaComponent,
-    CinemasComponent
+    CinemasComponent,
+    VilleComponent,
+    SalleComponent,
+    CinemaDetailComponent
   ],
   imports: [
     BrowserModule,
