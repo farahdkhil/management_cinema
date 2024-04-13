@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CinemaComponent } from './components/cinema/cinema.component';
+import { CinemasComponent } from './components/cinemas/cinemas.component';
 const routes: Routes = [
   {path: 'cinema', component: CinemaComponent  },
+  {path: 'cinemas', component: CinemasComponent  },
 ];
 
 @NgModule({
