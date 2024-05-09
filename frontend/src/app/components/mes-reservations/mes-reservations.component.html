@@ -1,0 +1,55 @@
+<div class="container py-3">
+  <h1>Mes rendez-vous</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+
+        <th scope="col">Date</th>
+        <th scope="col"><i class="fas fa-clock"></i>Heure</th>
+        <th scope="col">Film</th>
+        <th scope="col">Salle</th>
+        <th scope="col">Nombre de places réservations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+
+        <td>dateProjection</td>
+        <td>time </td>
+        <td>name </td>
+        <td>salle</td>
+        <td>nbPlace</td>
+        <td>
+          <!--<button class="btn text-success mx-1"><i class="fas fa-edit"></i></button>
+          <button class="btn text-danger"(click)="annulerRes(r.id)"><i class="fas fa-trash"></i></button>-->
+          <button type="button" class="btn text-danger" data-bs-toggle="modal" data-bs-target="#deleteComfirm">
+            <i class="fas fa-trash"></i>
+        </button>
+        <!-- modal -->
+        <div class="modal fade" id="deleteComfirm" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Comfirmer annulation ?</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+            
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-danger"
+                            data-bs-dismiss="modal">NON</button>
+                        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal"
+                           >OUI</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>

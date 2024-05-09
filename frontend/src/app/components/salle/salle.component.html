@@ -1,1 +1,41 @@
-<p>salle works!</p>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="panel panel-default panel-secondary">
+        <div class="panel-heading">Ajouter une salle</div>
+        <div class="panel-body">
+          <form >
+            <div class="form-group">
+              <label for="name">Nom de la salle</label>
+              <input type="text"  name="name" id="name" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="name">Nombre de place</label>
+              <input type="text" ngModel name="countSeats" id="address" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="name">Ville</label>
+              <!-- <option value="" disabled>Choose a city</option> -->
+              <select name="city" class="form-control">
+                <option >
+                  
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="name">Cinema</label>
+              <!-- <option value="" disabled>Choose a city</option> -->
+              <select  ngModel name="cinema" class="form-control">
+                <option >
+                  
+                </option>
+              </select>
+            </div>
+            <button class="btn btn-warning" type="submit">Ajouter</button>
+          </form>
+        </div>
+        </div>
+  
+        <hr>
+    
+    </div>
+  </div>

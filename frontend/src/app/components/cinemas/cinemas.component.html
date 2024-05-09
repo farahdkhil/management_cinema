@@ -1,33 +1,39 @@
 <div class="row">
     <div class="col-md-3">
       <ul class="list-group">
-        <li 
-              class="list-group-item"
-             
-              style="cursor: pointer;">
-         
+        <li class=" btn-warning" >
+            &nbsp;&nbsp;  Select A City
+         </li>
+        <li class="list-group-item" style="cursor: pointer;">
+         tunis
         </li>
+        <li class="list-group-item" style="cursor: pointer;">
+          sfax
+         </li>
+         <li class="list-group-item" style="cursor: pointer;">
+          Bizerte
+         </li>
       </ul>
     </div>
   
     <div class="col-md-9">
-      <div class="panel panel-default panel-primary">
-        <div class="panel-heading">List des cinemas</div>
+      <div class="panel panel-default panel-secondary">
+        <div class="panel-heading">Liste des cinemas</div>
         <div class="panel-body">
           <ul  class="nav nav-pills">
             <li
                  style="cursor: pointer;"
                  >
   
-              <a></a>
+              <a>Liste des salles</a>
             </li>
           </ul>
           <hr>
           <div class="row" >
             <div >
               <div class="col-md-6">
-              <div class="panel panel-default panel-primary" style="min-height: 370px;">
-                <div class="panel-heading"></div>
+              <div class="panel panel-default panel-warning" style="min-height: 370px;">
+                <div class="panel-heading">payer ticket</div>
                 <div class="panel-body" >
                   <div class="row">
                     <div class="col-md-6">
@@ -37,12 +43,13 @@
                               >
                     </div>
                     <div class="col-md-6">
+                      
                       <ul class="list-group">
                         <li 
                             
                              class="list-group-item"
                              
-                             style="cursor: pointer;">
+                             style="cursor: pointer;"> 
                           <span class="alert-danger"> price </span>
                           <span class="alert-info">dt</span>
                         </li>
@@ -60,7 +67,7 @@
                           class="btn btn-light"
                           style="margin: 2px;"
                           
-                          >
+                          > Nom du film
                        
                       </button>
                     </div>
@@ -75,8 +82,63 @@
                           <label class="control-label">Code de paiement</label>
                           <input type="text" ngModel name="paymentCode" class="form-control">
                         </div>
-                        <button type="submit" class="btn btn-default">Acheter</button>
+                        <button type="submit" class="btn btn-warning">Acheter</button>
                       </form>
+                    </div>
+  
+                  </div>
+                  </div>
+                  </div>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" >
+            <div >
+              <div class="col-md-6">
+              <div class="panel panel-default panel-warning" style="min-height: 370px;">
+                <div class="panel-heading">salle N°</div>
+                <div class="panel-body" >
+                  <div class="row">
+                    <div class="col-md-6">
+                        <img src="../../../assets/photos/image.png"
+                              alt="image of "
+                              style="width: 150px; height: 200px;"
+                              >
+                    </div>
+                    <div class="col-md-6 ">
+                      
+                      <ul class="list-group alert-danger">
+                        <li 
+                            
+                             class="list-group-item "
+                             
+                             style="cursor: pointer;"> 
+                          <span class=""> projections </span>
+                          
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div >
+                    <div >
+                    <div >
+  
+                    <div class="row" >
+                      <!-- <button *ngFor="let ticket of currentProjection.tickets._embedded.tickets"> -->
+                      <button
+                          
+                          class="btn btn-light"
+                          style="margin: 2px;"
+                          
+                          > Nom du film
+                       
+                      </button>
+                    </div>
+  
+                    <div>
+                      places
                     </div>
   
                   </div>

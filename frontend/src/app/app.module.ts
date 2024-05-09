@@ -10,6 +10,9 @@ import { CinemasComponent } from './components/cinemas/cinemas.component';
 import { VilleComponent } from './components/ville/ville.component';
 import { SalleComponent } from './components/salle/salle.component';
 import { CinemaDetailComponent } from './components/cinema-detail/cinema-detail.component';
+import { CategorieComponent } from './components/categorie/categorie.component';
+import { FilmComponent } from './components/film/film.component';
+import { MesReservationsComponent } from './components/mes-reservations/mes-reservations.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { CinemaDetailComponent } from './components/cinema-detail/cinema-detail.
     CinemasComponent,
     VilleComponent,
     SalleComponent,
-    CinemaDetailComponent
+    CinemaDetailComponent,
+    CategorieComponent,
+    FilmComponent,
+    MesReservationsComponent
   ],
   imports: [
     BrowserModule,
