@@ -105,21 +105,21 @@ public class CinemaInitServiceImpl implements ICinemaInitService {
         Stream.of("Histoire","Action","Fiction","Drama").forEach(cat->{
             Categorie categorie=new Categorie();
             categorie.setName(cat);
-            categoryRepository.save(categorie);
+            //categoryRepository.save(categorie);
         });
     }
 
     @Override
     public void initFilms() {
         double[] durees=new double[] {1,1.5,2,2.5,3,3.5};
-        List<Categorie> categories=categoryRepository.findAll();
+      //  List<Categorie> categories=categoryRepository.findAll();
         Stream.of("Game of thrones","titanic","harrypotter","greenbook","Seigneur des anneaux","Spider man","Iron man","Cat woman")
                 .forEach(titreFilm->{
                     Film film=new Film();
                     film.setTitre(titreFilm);
                     film.setDurees(durees[new Random().nextInt(durees.length)]);
                     film.setPhoto(titreFilm.replaceAll(" ","")+".jpg");
-                    film.setCategorie(categories.get(new Random().nextInt(categories.size())));
+         //           film.setCategorie(categories.get(new Random().nextInt(categories.size())));
                     filmRepository.save(film);
                 });
     }

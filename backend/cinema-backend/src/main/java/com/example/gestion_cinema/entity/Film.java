@@ -28,4 +28,6 @@ public class Film {
 
     @ManyToOne
     private Categorie categorie;
+    @ManyToOne
+    private filmCategory filmcategory;
 }

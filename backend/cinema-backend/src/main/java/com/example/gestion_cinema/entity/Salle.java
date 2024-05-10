@@ -2,13 +2,13 @@ package com.example.gestion_cinema.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Collection;
 
 @Entity
+@Getter
+@Setter
 @Data @NoArgsConstructor
 @AllArgsConstructor
 public class Salle {

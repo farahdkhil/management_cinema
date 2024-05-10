@@ -8,4 +8,5 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @Repository
 @CrossOrigin("*")
 public interface SalleRepository extends JpaRepository<Salle, Long> {
+    Salle getByName(String name);
 }

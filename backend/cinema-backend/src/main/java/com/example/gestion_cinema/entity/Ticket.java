@@ -22,4 +22,7 @@ public class Ticket {
     private Place place;
     @ManyToOne
     private Projection projection;
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 }
