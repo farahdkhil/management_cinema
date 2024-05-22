@@ -1,18 +1,16 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { environment } from '../environments/environment';
-import { salle } from '../common/salle';
-
+import { projection } from '../common/projection';
+import { Observable } from 'rxjs';
+import { film } from '../common/film';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SalleService {
-
+export class ProjectionService {
 
   baseUrl = environment.baseUrl;
-
 
   public getHeader(): HttpHeaders {
     let requestHeader = new HttpHeaders();
@@ -23,24 +21,20 @@ export class SalleService {
 
   constructor(private _http: HttpClient) { }
 
-  /* specialities$ = this._http.get<Salle[]>(this.baseUrl + "salle/find-all"); */
+  getAllProjections(): Observable<projection[]> {
+    return this._http.get<projection[]>(this.baseUrl + "projection/find-all");
+  }
 
-  getAllSalles(): Observable<salle[]> {
-    return this._http.get<salle[]>(this.baseUrl + "salle/find-all");
+  getAllByFilm(film: number): Observable<projection[]> {
+    return this._http.get<projection[]>(this.baseUrl + `projection/find-by-film/${film}`);
   }
 
   delete(id: number) {
-    return this._http.delete(this.baseUrl + `salle/${id}`);
+    return this._http.delete(this.baseUrl + `projection/${id}`);
   }
 
-  save(salle: salle) {
-    return this._http.post<salle>(this.baseUrl + "salle/add", salle);
+  save(projection: projection) {
+    return this._http.post<projection>(this.baseUrl + "projection/add", projection);
 
   }
-
-  getSalleDataById(id: any) {
-    return this._http.get<salle>(this.baseUrl + `salle/find-by-id/${id}`)
-  }
-
-
 }

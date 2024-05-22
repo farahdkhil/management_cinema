@@ -9,7 +9,7 @@ import { place } from '../common/place';
 })
 export class CinemasService {
 
-  host: string = 'http://localhost:8080/';
+  host: string = 'http://localhost:8000/';
   constructor(public http: HttpClient) { }
 
 

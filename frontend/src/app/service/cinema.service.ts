@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class CinemaService {
 
-  url = `http://localhost:8080/cinemas`;
+  url = `http://localhost:8000/cinemas`;
   constructor(public http: HttpClient) { }
 
   saveCinema(c: cinema) {
@@ -30,7 +30,7 @@ export class CinemaService {
   }
 
   deleteCinema(id:any, ville:ville) {
-    const urlForDeleteCinema = `http://localhost:8080/deleteCinemas/${id}/${ville.id}`;
+    const urlForDeleteCinema = `http://localhost:8000/deleteCinemas/${id}/${ville.id}`;
     return this.http.delete(`${urlForDeleteCinema}`);
   }
 

@@ -1,0 +1,35 @@
+<div class="container">
+    <h2>Projection List</h2>
+    
+    <div *ngIf="loading">Loading...</div>
+    <div *ngIf="!loading && projections.length === 0">No projections found.</div>
+    
+    <ul *ngIf="!loading && projections.length > 0">
+      <li *ngFor="let projection of projections">
+        {{ projection.film?.titre }} - {{ projection.dateProjection | date }} - {{ projection.prix }} 
+        <button (click)="deleteProjection(projection.id)">Delete</button>
+      </li>
+    </ul>
+    
+    <h2>Add New Projection</h2>
+    <form (ngSubmit)="addProjection()">
+      <div>
+        <label for="film">Film:</label>
+        <input type="text" id="film" [(ngModel)]="newProjection.film!.titre" name="film">
+      </div>
+      <div>
+        <label for="dateProjection">Date:</label>
+        <input type="date" id="dateProjection" [(ngModel)]="newProjection.dateProjection" name="dateProjection">
+      </div>
+      <div>
+        <label for="prix">Price:</label>
+        <input type="number" id="prix" [(ngModel)]="newProjection.prix" name="prix">
+      </div>
+      <div>
+        <label for="salle">Salle:</label>
+        <input type="text" id="salle" [(ngModel)]="newProjection.salle!.name" name="salle">
+      </div>
+      <button type="submit">Add Projection</button>
+    </form>
+  </div>
+  

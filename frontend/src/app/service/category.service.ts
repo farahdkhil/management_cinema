@@ -1,19 +1,17 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
 import { environment } from '../environments/environment';
-import { salle } from '../common/salle';
-
+import { FilmCategory } from '../common/film-category';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class SalleService {
-
-
+export class CategoryService {
+  
   baseUrl = environment.baseUrl;
 
-
+  
   public getHeader(): HttpHeaders {
     let requestHeader = new HttpHeaders();
     //requestHeader = requestHeader.append("Authorization","Bearer "+ sessionStorage.getItem('JwtToken'));
@@ -22,25 +20,17 @@ export class SalleService {
   }
 
   constructor(private _http: HttpClient) { }
-
-  /* specialities$ = this._http.get<Salle[]>(this.baseUrl + "salle/find-all"); */
-
-  getAllSalles(): Observable<salle[]> {
-    return this._http.get<salle[]>(this.baseUrl + "salle/find-all");
+  getAllCategory(): Observable<FilmCategory[]> {
+    return this._http.get<FilmCategory[]>(this.baseUrl + "category1/find-all");
   }
 
   delete(id: number) {
-    return this._http.delete(this.baseUrl + `salle/${id}`);
+    return this._http.delete(this.baseUrl + `category1/${id}`);
   }
 
-  save(salle: salle) {
-    return this._http.post<salle>(this.baseUrl + "salle/add", salle);
+  save(category: FilmCategory) {
+    return this._http.post<FilmCategory>(this.baseUrl + "category1/add", category);
 
   }
-
-  getSalleDataById(id: any) {
-    return this._http.get<salle>(this.baseUrl + `salle/find-by-id/${id}`)
-  }
-
 
 }

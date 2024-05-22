@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Ticket List</h2>
+    
+    <div *ngIf="loading">Loading...</div>
+    <div *ngIf="!loading && tickets.length === 0">No tickets found.</div>
+    
+    <ul *ngIf="!loading && tickets.length > 0">
+      <li *ngFor="let ticket of tickets">
+        {{ ticket.nomclient }} - {{ ticket.prix }} 
+        <button (click)="deleteTicket(ticket.id)">Delete</button>
+      </li>
+    </ul>
+    
+    <h2>Add New Ticket</h2>
+    <form (ngSubmit)="addTicket()">
+      <div>
+        <label for="nomclient">Client Name:</label>
+        <input type="text" id="nomclient" [(ngModel)]="newTicket.nomclient" name="nomclient">
+      </div>
+      <div>
+        <label for="prix">Price:</label>
+        <input type="number" id="prix" [(ngModel)]="newTicket.prix" name="prix">
+      </div>
+      <div>
+        <label for="codePayement">Payment Code:</label>
+        <input type="number" id="codePayement" [(ngModel)]="newTicket.codePayement" name="codePayement">
+      </div>
+      <button type="submit">Add Ticket</button>
+    </form>
+  </div>
+  
